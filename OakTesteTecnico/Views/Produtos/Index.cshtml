@@ -1,0 +1,27 @@
+﻿@model IEnumerable<OakTesteTecnico.Models.ProdutoViewModel>
+
+@{
+    ViewData["Title"] = "Listagem de Produtos";
+}
+
+<h2>Listagem de Produtos</h2>
+
+<a class="btn btn-primary" asp-action="Create">Cadastrar Novo Produto</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+                <td>@produto.Valor</td>
+            </tr>
+        }
+    </tbody>
+</table>

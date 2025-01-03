@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Pagina inicial";
 }
+<div class="container-fluid p-0" >
+    <div class="text-center">
+        <div class="banner">
+            <img src="~/images/banner.jpg" alt="Banner" class="img-fluid" />
+        </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <div style="color: #007352">
+            <h1 class="display-4 mt-4">Bem-vindo</h1>
+            <p class="lead">Escolha uma das opções abaixo:</p>
+            <a class="btn-custom me-4" asp-controller="Produtos" asp-action="Index">Visualizar Produtos</a>
+            <a class="btn-custom" asp-controller="Produtos" asp-action="Create">Cadastrar Produto</a>
+        </div>
+
+    </div>
 </div>
+
+<style>
+    .banner {
+        margin-bottom: 20px;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .full-height {
+        height: 100vh; /* Altura total da viewport */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centralizar verticalmente */
+        align-items: center; /* Centralizar horizontalmente */
+    }
+</style>

@@ -25,17 +25,43 @@ Este projeto é uma aplicação web desenvolvida em ASP.NET Core MVC com Blazor,
 
 ### Tela Inicial
 
-![Tela Inicial](path/to/tela_inicial.png)
+![Tela Inicial](OakTesteTecnico/PreviewTelas/tela-inicial.png)
 
 ### Tela de Cadastro
 
-![Tela de Cadastro](path/to/tela_cadastro.png)
+![Tela de Cadastro](OakTesteTecnico/PreviewTelas/tela-cadastrar.png)
 
 ### Tela de Listagem de Produtos
 
-![Tela de Listagem de Produtos](path/to/tela_listagem.png)
+![Tela de Listagem de Produtos](OakTesteTecnico/PreviewTelas/listar-tela.png)
 
 ## Como Executar
 
 1. Clone o repositório:
+
+git clone https://github.com/gustavo-szesz/OakTesteTecnico.git
+
+2. Navegue até o diretório do projeto:
+
+cd OakTesteTecnico
+
+3. Restaure as dependências do projeto:
+   dotnet restore
    
+5. Execute a aplicação:
+   dotnet run
+
+
+## Tecnologias Utilizadas
+
+- ASP.NET Core MVC
+- Blazor
+- Bootstrap
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

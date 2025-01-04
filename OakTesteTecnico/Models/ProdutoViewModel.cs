@@ -1,9 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace OakTesteTecnico.Models
 {
+    #region Model ProdutoViewModel (Id, Nome, Descricao, Valor, DisponivelParaVenda)
     public class ProdutoViewModel
     {
-        #region Propriedades
-
         /// <summary>
         /// Identificador único do produto.
         /// </summary>
@@ -12,23 +13,26 @@ namespace OakTesteTecnico.Models
         /// <summary>
         /// Nome do produto.
         /// </summary>
-        public string Nome { get; set; } = string.Empty;
+        [Required(ErrorMessage = "O campo Nome é obrigatório.")]
+        public required string Nome { get; set; }
 
         /// <summary>
         /// Descrição do produto, uma string simples.
         /// </summary>
-        public string Descricao { get; set; } = string.Empty;
+        [Required(ErrorMessage = "O campo Descrição é obrigatório.")]
+        public required string Descricao { get; set; }
 
         /// <summary>
         /// Valor do produto, está em decimal.
         /// </summary>
-        public decimal Valor { get; set; }
+        [Required(ErrorMessage = "O campo Valor é obrigatório.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "O valor deve ser maior que zero.")]
+        public decimal? Valor { get; set; }
 
         /// <summary>
         /// Indica se o produto está disponível para venda.
         /// </summary>
-        public bool DisponivelParaVenda { get; set; }
-
-        #endregion
+        public required bool DisponivelParaVenda { get; set; }
     }
+    #endregion
 }

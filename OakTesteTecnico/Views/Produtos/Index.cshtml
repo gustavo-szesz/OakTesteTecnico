@@ -4,24 +4,26 @@
     ViewData["Title"] = "Listagem de Produtos";
 }
 
-<h2>Listagem de Produtos</h2>
+<div style="padding: 20px;">
+    <h2>Listagem de Produtos</h2>
 
-<a class="btn btn-primary" asp-action="Create">Cadastrar Novo Produto</a>
+    <a class="btn-custom" asp-action="Create">Cadastrar Novo Produto</a>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Valor</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var produto in Model)
-        {
+    <table class="table mt-3">
+        <thead>
             <tr>
-                <td>@produto.Nome</td>
-                <td>@produto.Valor</td>
+                <th>Nome</th>
+                <th>Valor</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var produto in Model)
+            {
+                <tr>
+                    <td>@produto.Nome</td>
+                    <td>@produto.Valor</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
